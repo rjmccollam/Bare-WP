@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
-
-<head profile="http://gmpg.org/xfn/11">
+<html lang="en">
+<head>
 	
-	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>">
+
+	<meta name="viewport" content="width=device-width">
 	
 	<?php if (is_search()) { ?>
-	   <meta name="robots" content="noindex, nofollow" /> 
+	   <meta name="robots" content="noindex, nofollow"> 
 	<?php } ?>
 
 	<title>
@@ -32,9 +32,9 @@
 		   ?>
 	</title>
 		
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">
 	
-	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 

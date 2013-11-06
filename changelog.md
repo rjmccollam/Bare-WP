@@ -2,6 +2,15 @@
 
 ###Current Verison
 
+####Version 1.1 - 11/5/2013
+- Updated `DOCTYPE` to HTML5 (finally)
+- Added `meta` viewport tag
+- Removed the `/` from self closing tags in the header
+- Fixed weird " ` " in Sitemap page template so it doesn't error out anymore
+- Updated jQuery version to 1.10.2 (Google hosted)
+- Added support for custom menus by default
+- Some other very minor changes that are more for my OCD than actual useful changes
+
 ####Version 1.0
 - It's offical Bare is ready to roll just how we want it
 - Now includes spiffy BARE screenshot.png

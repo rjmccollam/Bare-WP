@@ -38,4 +38,10 @@
     // Add Featured Image support
     add_theme_support( 'post-thumbnails' );
 
+    // Custom Menus
+    register_nav_menus( array(
+        'main_menu' => 'Main Menu',
+        'sub_menu' => 'Sub Menu'
+    ));
+
 ?>

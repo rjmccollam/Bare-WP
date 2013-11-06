@@ -1,5 +1,5 @@
-<div id="sidebar">
+<div class="sidebar">
 
     <?php dynamic_sidebar('Sidebar Widgets'); ?>
 
-</div>
+</div><!-- end sidebar -->
