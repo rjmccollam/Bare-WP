@@ -1,28 +1,73 @@
 /*   
-	Theme Name: Bare
-	Theme URI: http://www.rjmccollam.com
-	Description: A starting point for WordPress development projects
-	Author: RJ McCollam
-	Author URI: http://www.rjmccollam.com
-	Version: 1.0
-	Tags: blank, starter, basic, bare
+	Theme Name: PhoenixBites
+	Description: A custom WordPress theme designed and developed specifically for the wonderful group at PhoenixBites. This theme was painstakingly developed by your loving husband. Please submit all issues and requests to me (said husband) on the couch, preferably just after you have crafted some delicious dinner or dessert.
+	Author: WeDoDev
+	Author URI: http://www.wedodev.com
+	Version: 2.0
+    Tags: Awesome, Amazing, Food, Love, Took Forever, Wood
 */
+
 
 
 
 /*---- General ----*/
 * {margin: 0; padding: 0;}
-body {font: ; color: #;}
-.container {width: 978px; margin: 0 auto; position: relative;}
+body {background: url(images/pb-logo-large.png) 140% 0% no-repeat, url(images/bg.jpg) repeat; font: normal 16px/28px "Lato"; color: #464648;}
+input {-webkit-appearance: none;}
+.container {width: 1180px; margin: 0 auto; position: relative;}
 .right {float: right;}
 .left {float: left;}
 .clear {clear: both;}
 .none {display: none;}
 a img {outline: none; border: none;}
+.img-left, .avatar-128 {float: left; padding: 1px; border: 1px solid #dfe3e7; box-shadow: -3px 3px 1px rgba(0,0,0,.3); margin: 5px 15px 5px 0;}
+.img-right {float: right; padding: 1px; border: 1px solid #dfe3e7; box-shadow: -3px 3px 1px rgba(0,0,0,.3); margin: 5px 0 5px 15px;}
+
 
 
 
 /*---- Header ----*/
+#top-bar {background: url(images/top-bar-bg.png) repeat; height: 48px; width: 100%; border-bottom: 1px solid #fad7a0; position: relative; z-index: 500;}
+#top-bar form {margin: 7px 0 0; background: #f5f5f5; border: 1px solid #b62b26; height: 30px; width: 226px; padding: 0 12px;}
+#top-bar form input {border: none; outline: none; background: none; font-family: Georgia, Times, "Times New Roman", serif; font-size: 12px; color: #92979d; font-style: italic; width: 200px; height: 30px;}
+#top-bar form input#searchsubmit {background: url(images/sprite.png) -255px 0; display: block; height: 18px; width: 16px; text-indent: -9999px; position: relative; top: 5px; cursor: pointer;}
+#top-bar form input#searchsubmit:hover {opacity: .8;}
+#pb-logo-large {background: url(images/pb-logo-large.png) no-repeat; height: 790px; width: 1207px; position: absolute; top: 0; right: -825px; z-index: 100;}
+#top-banner-ad {background: url(images/bg.jpg) repeat; padding: 5px; border-radius: 5px; box-shadow: 0 0 15px black; display: block; max-width: 728px; max-height: 90px; margin: 30px auto 20px;}
+#logo {background: url(images/sprite.png) 0 0; height: 200px; width: 255px; display: block; text-indent: -9999px; position: absolute; top: 120px; left: 40%; z-index: 600;}
+
+
+
+/*---- Top Nav ----*/
+#top-bar ul {list-style: none; margin: 9px 0 0;}
+#top-bar ul li {display: inline-block; position: relative;}
+#top-bar ul li a {color: #fff; text-decoration: none; text-transform: uppercase; font-size: 12px; border-right: 1px dotted white; padding: 0 12px 0 10px; text-shadow: 0 0 2px #464648;}
+#top-bar ul li:first-child a {padding: 0 12px 0 0;}
+#top-bar ul li:last-child a {border: none;}
+#top-bar ul li a:hover {color: #e26e69;}
+#top-bar ul li ul {display: none; position: absolute; top: 30px; left: 0; background: #952420; border: 1px solid #ac3531; box-shadow: 0 0 10px rgba(0, 0, 0, .5); width: 158px;}
+#top-bar ul li:hover ul {display: block;}
+#top-bar ul li ul:before {content: " "; position: absolute; top: -15px; left: 15px; width: 0; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-bottom: 15px solid #952420;}
+#top-bar ul li ul li { display: block;}
+#top-bar ul li ul li a, #top-bar ul li ul li:first-child a {border: none; display: block; padding: 0 10px; text-shadow: none; text-transform: none; font-size: 14px;}
+
+
+
+/*---- Nav -----*/
+#nav {list-style: none; background: url(images/nav-bg.png) bottom repeat-x; padding: 0 0 20px 0; margin: 75px 0 20px;}
+#nav li {display: inline-block; position: relative;}
+#nav li.spacer {margin: 0 230px 0 0;}
+#nav li a {font: normal 24px "LeagueGothicRegular"; color: #553b16; text-transform: uppercase; text-decoration: none; text-shadow: 1px 0 0 #ffebcc; margin: 0 30px 0 0; padding: 7px 10px 5px;}
+#nav li:last-child a {margin: 0;}
+#nav li a:hover, #nav li:hover a {background: #553b16; color: #f5d29e; text-shadow: none;}
+#nav li ul {display: none; position: absolute; top: 25px; left: 0; width: 250px; background: #553b16; padding: 10px 0; z-index: 1000;}
+#nav li:hover ul {display: block;}
+#nav li ul li {display: block;}
+#nav li ul li a, #nav li:hover ul li a {padding: 6px 10px; margin: 0; display: block; font: 15px "Lato"; color: #f8d7a5; text-transform: none; text-shadow: none;}
+#nav li ul li:first-child a {border-top: none;}
+#nav li ul li:last-child a {border-bottom: none;}
+#nav li ul li:last-child a {margin: 0;}
+#nav li ul li a:hover {background: #a58d68;}
 
 
 
@@ -33,30 +78,132 @@ a img {outline: none; border: none;}
 
 
 /*---- Pages ----*/
+.wrapper {background: url(images/sidebar-bg.png) repeat;}
+#content {background: #fbfcfd; width: 799px; padding: 105px 20px 40px; border-right: 1px solid #fff; box-shadow: 10px 0 6px -6px rgba(0,0,0,.2); position: relative; z-index: 500;}
+#content:before {content: ""; background: url(images/content-bg.png) top repeat-x; width: 840px; height: 7px; display: block; position: absolute; top: -7px; left: 0;}
+.main {}
+.main ul.sharing {list-style: none; margin: 5px 0 30px;}
+.main ul.sharing li {list-style-image: none; display: inline-block;}
+.main ul.sharing li a {display: inline-block; height: 29px; width: 29px; margin: 0 10px 0 0; text-indent: -9999px;}
+.sharing-fb {background: url(images/sprite.png) -275px -50px;}
+.sharing-twitter {background: url(images/sprite.png) -314px -50px;}
+.sharing-email {background: url(images/sprite.png) -353px -50px;}
+.sharing-pinterest {background: url(images/sprite.png) -392px -50px;}
+.main ul.sharing li a:hover {opacity: .8;}
+.main h1 {font: normal 48px/1.2em "LeagueGothicRegular"; color: #b22722; text-transform: uppercase; margin: 0 0 30px;}
+.main h2 {font: normal 40px/1.2em "LeagueGothicRegular"; color: #4d4d4f; margin: 0 0 30px;}
+.main h3 {font: normal 32px/1.2em "LeagueGothicRegular"; color: #b22722; margin: 0 0 30px;}
+.main p {margin: 0 0 30px;}
+.main ol, .main ul {margin: 0 0 30px 60px;}
+.main li {line-height: 36px;}
+.main ul li {list-style-image: url(images/bullet.png);}
+.main a, .comments-link, .navigation a {color: #b22722; text-decoration: none;}
+.main a:hover, .comments-link:hover, .navigation a:hover {color: #e26e69;}
+.main blockquote {background: #eee; margin: 0 0 30px; width: 90%; left: 5%; position: relative; border-left: 5px solid #4d4d4f; padding: 5px 0 5px 20px; font-style: italic;}
+.main .meta {font-size: 14px; color: #1b1b1b; margin: -40px 0 0; font-style: normal;}
+.main .about-author {background: url(images/read-more-bg.png) top repeat-x, url(images/read-more-bg.png) bottom repeat-x; margin: 0 0 30px; padding: 20px 0 30px;}
+.main .about-author h4 {margin: 0 0 10px;}
+.main .about-author p {margin: 0 0 5px;}
+.main input {outline: none; border: 1px solid rgba(0,0,0,.3); font: normal 16px/28px "Lato"; color: #464648; width: 70%; padding: 5px 2%;}
+.main textarea {outline: none; border: 1px solid rgba(0,0,0,.3); font: normal 16px/28px "Lato"; color: #464648; width: 70%; padding: 5px 2%;}
+.main input[type="submit"] {background: #b22722; outline: none; border: none; height: 39px; font: normal 16px "Lato"; color: #f3f3f4; text-transform: uppercase; cursor: pointer; width: 20%; margin: 1px 0 0; padding: 0 10px;}
+.main input[type="submit"]:hover {background: #e26e69;}
+
+
+
+/*---- Posts/Search/Archives ----*/
+h2.bar {background: url(images/sprite.png) 0 -210px; display: block; height: 57px; width: 100%; position: relative; left: -69px; font: 34px "LeagueGothicRegular"; text-transform: uppercase; color: #f4f4f4; padding: 13px 0 0 70px; margin: 0 0 20px;}
+.post {font-size: 14px; line-height: 18px; margin: 0 0 30px;}
+.post h3 a {font: normal 28px/1em "LeagueGothicRegular"; color: #b22722; text-decoration: none; margin: 0 0 5px;}
+.post h3 a:hover {color: #e26e69;}
+.meta {font-size: 12px; color: #1b1b1b; margin: 0 0 5px; font-style: italic;}
+.half {width: 372px; height: 290px; margin: 0 25px 0 0; position: relative;}
+.half img.featured-image {height: 90px; max-width: 115px; margin: 0 15px 8px 0;}
+.half .read-more {position: absolute; right: 0; bottom: 27px; margin: 0;}
+.half .read-more-bg {position: absolute; top: 247px;}
+.full {margin: 0 25px 0 0; position: relative; height: 175px;}
+.full img.featured-image {height: 110px; max-width: 155px; margin: 0 15px 8px 0;}
+.full .read-more {position: absolute; right: 0; bottom: 17px; margin: 0;}
+.full .read-more-bg {position: absolute; top: 142px;}
+.read-more {background: #b2b6b9; font: normal 18px/18px "LeagueGothicRegular"; text-transform: uppercase; color: #fff; text-decoration: none; padding: 7px 10px 3px; margin: 20px 0; position: relative; z-index: 5;}
+.read-more:hover {background: #b22722;}
+.read-more-bg {background: url(images/read-more-bg.png) center repeat-x; display: block; width: 100%; height: 5px; position: relative; top: 32px; z-index: 4;}
 
 
 
 
-/*---- Single/Archive/Search ----*/
-.meta {margin: -20px 0 20px;}
-.post {margin: 0 0 20px; padding: 0 0 20px; border-bottom: 1px solid #666;}
-.read-more {}
+/*---- Sidebar ----*/
+#sidebar {background: url(images/sidebar-bg.png) repeat; width: 300px; position: relative; padding: 75px 20px 40px; z-index: 400;}
+#sidebar:before {content: ""; background: url(images/sidebar-top-bg.png) top repeat-x; width: 340px; height: 7px; position: absolute; top: -7px; left: 0;}
+.social {list-style: none; text-align: center; position: relative; z-index: 400;}
+.social li {display: inline;}
+.social li a {display: inline-block; height: 33px; width: 43px; text-indent: -9999px; margin: 0 8px 0 0; position: relative; top: 0; transition: all .3s ease-out;}
+.social li:last-child a {margin: 0;}
+.social li a:hover {height: 43px; position: relative; top: -10px; margin: 0 8px -10px 0; transition: all .3s ease-out;}
+.social li:last-child a:hover {margin: 0 0 -10px;}
+.fb {background: url(images/sprite.png) -275px 0;}
+.twitter {background: url(images/sprite.png) -328px 0;}
+.email {background: url(images/sprite.png) -382px 0;}
+.pinterest {background: url(images/sprite.png) -434px 0;}
+.rss {background: url(images/sprite.png) -487px 0;}
+.social-shadow {background: url(images/social-shadow.png); height: 6px; width: 267px; margin: -5px auto 15px; position: relative; z-index: 450;}
+.widget {margin: 0 0 15px;}
+.widget h2 {text-transform: uppercase; color: #b22722; font-size: 28px; font-family: "LeagueGothicRegular"; font-weight: normal; margin: 0 0 10px;}
+.widget hr {outline: none; border-top: 1px solid #b6b6b6; border-bottom: 1px solid #fff; width: 100%;}
+.border {border: 1px solid #efeff0; box-shadow: -3px 3px 1px rgba(0,0,0,.75);}
+.newsletter {padding: 15px 0;}
+.newsletter-sign-up input[type="text"] {background: #fbfcfd; border: 2px solid #fff; outline: none; box-shadow: inset 0 0 9px rgba(0,0,0,.75); height: 38px; width: 185px; font: normal 14px "Lato"; color: #95989b; padding: 0 15px;}
+.newsletter-sign-up input[type="submit"] {background: #b22722; outline: none; border: none; height: 39px; font: normal 16px "LeagueGothicRegular"; color: #f3f3f4; text-transform: uppercase; cursor: pointer; width: 75px; margin: 1px 0 0;}
+.newsletter-sign-up input[type="submit"]:hover {background: #e26e69;}
+.widget .read-more {background: #b22722; position: relative; top: -23px; z-index: 500; margin: 0;}
+.widget .read-more:hover {background: #e26e69;}
+.widget .read-more-bg {position: relative; top: -10px;}
+.recent {list-style: none;}
+.recent li {background: url(images/sidebar-hr.png) top repeat-x; font-size: 14px; padding: 20px 0;}
+.recent li div:first-of-type {margin: 25px 0 0;}
+.recent li a {text-transform: uppercase; color: #b22722; font-size: 24px; line-height: 18px; font-family: "LeagueGothicRegular"; text-decoration: none;}
+.recent li a:hover {color: #e26e69;}
+.recent li img {height: 90px; max-width: 115px; margin: 0 15px 0 0;}
+
 
 
 
 /*---- Footer ----*/
+#footer {background: url(images/footer-bg.png) repeat; border-top: 1px solid #fad7a0; padding: 30px 0; position: relative; z-index: 500;}
+#footer a {color: #faddae; text-decoration: none;}
+#footer a:hover {color: #e26e69;}
+.box {width: 373px; color: #fbfcfd; font-size: 14px; line-height: 22px;}
+.box h3 {font: normal 28px/28px "LeagueGothicRegular"; text-transform: uppercase; text-shadow: 1px 0 0 #000;}
+.box hr {border-top: 1px solid #333435; border-bottom: 1px solid #5d5e60; border-left: none; border-right: none; outline: none; margin: 20px 0;}
+.box ul {width: 50%; list-style: none;}
+.box ul li:before {content:">"; color: #faddae; margin: 0 5px 0 0;}
+#twitter {background: url(images/twitter-bg.jpg) top center no-repeat; margin: 0 30px;}
+#twitter ul {list-style: none; width: 100%;}
+#twitter ul li {background: url(images/twitter-separator.png) bottom center no-repeat; padding: 0 0 20px; margin: 0 0 20px;}
+#twitter ul li:before {content: ""; margin: 0;}
+#footer #twitter ul li span {font-size: 12px;}
+#twitter .user, #twitter .interact {display: none;}
+#copy {background: #242424; font-size: 12px; color: #fbfcfd; padding: 30px 0;}
+#copy a {color: #faddae; text-decoration: none;}
+#copy a:hover {color: #e26e69;}
 
-
-
-
-/*---- Comments ----*/
-ol.commentlist {list-style: none; margin: 0;}
-ol.commentlist li.comment {border-bottom: 1px dotted #666; padding: 10px;}
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {margin: 5px 20px 20px 0;}
+.aligncenter, div.aligncenter {display: block; margin: 5px auto 5px auto;}
+.alignright {float:right; margin: 5px 0 20px 20px;}
+.alignleft {float: left; margin: 5px 20px 20px 0;}
+.aligncenter {display: block; margin: 5px auto 5px auto;}
+a img.alignright {float: right; margin: 5px 0 20px 20px;}
+a img.alignnone {margin: 5px 20px 20px 0;}
+a img.alignleft {float: left; margin: 5px 20px 20px 0;}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto;}
+ol.commentlist {list-style: none; margin: 30px 0;}
+ol.commentlist li.comment {border-bottom: 1px solid #666; padding: 10px; line-height: 30px;}
 ol.commentlist li.comment div.vcard cite.fn {font-style: normal;}
-ol.commentlist li.comment div.vcard img.avatar {float:right; margin: 0 0 10px 10px;}
+ol.commentlist li.comment div.vcard img.avatar {float:right; margin: 10px 0 10px 10px;}
 ol.commentlist li.comment div.comment-meta {font-size: 10px;}
-ol.commentlist li.comment div.comment-meta a {color: #ccc;}
-ol.commentlist li.comment div.reply {font-size: 11px;}
+ol.commentlist li.comment div.reply {font-size: 14px;}
 ol.commentlist li.comment div.reply a {font-weight: bold;}
 ol.commentlist li.comment ul.children {list-style: none; margin: 10px 0 0;}
 ol.commentlist li.comment ul.children li.depth-2 {border-left: 5px solid #555; margin: 0 0 10px 10px;}
@@ -65,3 +212,64 @@ ol.commentlist li.comment ul.children li.depth-4 {border-left: 5px solid #bbb; m
 ol.commentlist li.even {background: #fff;}
 ol.commentlist li.odd {background: #f6f6f6;}
 ol.commentlist li.parent {border-left: 5px solid #111;}
+ol.commentlist li.comment div.comment-meta {font-size: 14px; margin: -5px 0; color: #553b16;}
+.main ol.commentlist p {margin: 0 0 10px;}
+cite.fn {font-size: 26px; font-family: "LeagueGothicRegular";}
+#commentform div {margin: 0 0 25px; float: left;}
+#commentform input {outline: none; border: 1px solid rgba(0,0,0,.3); font: normal 16px/28px "Lato"; color: #464648; width: 226px; padding: 8px 10px;}
+#commentform div.comment-spacer {margin: 0 27px;}
+#commentform textarea {outline: none; border: 1px solid rgba(0,0,0,.3); font: normal 16px/28px "Lato"; color: #464648; width: 96%; padding: 2%; height: 150px;}
+#commentform input[type="submit"] {background: #b22722; outline: none; border: none; height: 39px; font: normal 16px "Lato"; color: #f3f3f4; text-transform: uppercase; cursor: pointer; width: 25%; margin: 15px 0 0; padding: 0 10px;}
+#commentform input[type="submit"]:hover {background: #e26e69;}
+
+
+
+
+/*---- Fonts ----*/
+@font-face {
+    font-family: 'LeagueGothicRegular';
+    src: url('fonts/LeagueGothic-Regular-webfont.eot');
+    src: url('fonts/LeagueGothic-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/LeagueGothic-Regular-webfont.woff') format('woff'),
+         url('fonts/LeagueGothic-Regular-webfont.ttf') format('truetype'),
+         url('fonts/LeagueGothic-Regular-webfont.svg#LeagueGothicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'LeagueGothicItalic';
+    src: url('fonts/LeagueGothic-Italic-webfont.eot');
+    src: url('fonts/LeagueGothic-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/LeagueGothic-Italic-webfont.woff') format('woff'),
+         url('fonts/LeagueGothic-Italic-webfont.ttf') format('truetype'),
+         url('fonts/LeagueGothic-Italic-webfont.svg#LeagueGothicItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'LeagueGothicCondensedRegular';
+    src: url('fonts/LeagueGothic-CondensedRegular-webfont.eot');
+    src: url('fonts/LeagueGothic-CondensedRegular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/LeagueGothic-CondensedRegular-webfont.woff') format('woff'),
+         url('fonts/LeagueGothic-CondensedRegular-webfont.ttf') format('truetype'),
+         url('fonts/LeagueGothic-CondensedRegular-webfont.svg#LeagueGothicCondensedRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'LeagueGothicCondensedItalic';
+    src: url('fonts/LeagueGothic-CondensedItalic-webfont.eot');
+    src: url('fonts/LeagueGothic-CondensedItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/LeagueGothic-CondensedItalic-webfont.woff') format('woff'),
+         url('fonts/LeagueGothic-CondensedItalic-webfont.ttf') format('truetype'),
+         url('fonts/LeagueGothic-CondensedItalic-webfont.svg#LeagueGothicCondensedItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

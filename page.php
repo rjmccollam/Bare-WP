@@ -1,15 +1,23 @@
 <?php get_header(); ?>
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	<div id="content" class="left">
 
-		<h1><?php the_title(); ?></h1>
+		<div class="main">
 
-		<?php the_content(); ?>
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>		
+				<h1><?php the_title(); ?></h1>
 
-	<?php endwhile; endif; ?>
+				<?php the_content(); ?>
 
-<?php get_sidebar(); ?>
+			<?php endwhile; endif; ?>
+
+			<div class="clear"></div>
+
+		</div>
+
+	</div><!-- end content -->
+
+	<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

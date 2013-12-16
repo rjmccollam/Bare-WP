@@ -6,68 +6,77 @@
 
 <?php get_header(); ?>
 
-	<h3>Authors</h3>
+	<div id="content" class="left">
 
-		<ul>
+		<div class="main">
 
-			<?php wp_list_authors(array(
-		    	'exclude_admin' => false,
-		  		));
-			?>
+			<h3>Authors</h3>
 
-		</ul>
+				<ul>
 
-	<h3>Pages</h3>
+					<?php wp_list_authors(array(
+				    	'exclude_admin' => false,
+				  		));
+					?>
 
-		<ul>
+				</ul>
 
-			<?php
-				// Add pages you’d like to exclude in the exclude here
-				wp_list_pages(array(
-					'exclude' => '',
-					'title_li' => '',
-					));
-			?>
+			<h3>Pages</h3>
 
-		</ul>
+				<ul>
 
-	<h3>Posts</h3>
+					<?php
+						// Add pages you’d like to exclude in the exclude here
+						wp_list_pages(array(
+							'exclude' => '',
+							'title_li' => '',
+							));
+					?>
 
-		<?php
+				</ul>
 
-			// Add categories you’d like to exclude in the exclude here
+			<h3>Posts</h3>
 
-			$cats = get_categories('exclude=');
+				<?php
 
-			foreach ($cats as $cat) {
+					// Add categories you’d like to exclude in the exclude here
 
-			  echo "<strong>".$cat->cat_name."</strong>";
+					$cats = get_categories('exclude=');
 
-			  echo "<ul>";
+					foreach ($cats as $cat) {
 
-			  query_posts('posts_per_page=-1&cat='.$cat->cat_ID);
+					  echo "<strong>".$cat->cat_name."</strong>";
 
-			  while(have_posts()) {
+					  echo "<ul>";
 
-			    the_post();
+					  query_posts('posts_per_page=-1&cat='.$cat->cat_ID);
 
-			    $category = get_the_category();
+					  while(have_posts()) {
 
-			    // Only display a post link once, even if it’s in multiple categories
+					    the_post();
 
-			    if ($category[0]->cat_ID == $cat->cat_ID) {
+					    $category = get_the_category();
 
-			      echo '<li><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
+					    // Only display a post link once, even if it’s in multiple categories
 
-			    }
+					    if ($category[0]->cat_ID == $cat->cat_ID) {
 
-			  }
+					      echo '<li><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
 
-			  echo "</ul>";
+					    }
 
-			}
+					  }
 
-		?>
+					  echo "</ul>";
+
+					}
+
+				?>
+
+
+		</div>
+
+	</div><!-- end content -->
 
 <?php get_sidebar(); ?>
 
