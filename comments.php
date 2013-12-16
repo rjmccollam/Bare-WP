@@ -10,46 +10,41 @@
 	}
 ?>
 
-<div class="main">
+<?php if ( have_comments() ) : ?>
+	
+	<h2 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?></h2>
 
-	<?php if ( have_comments() ) : ?>
-		
-		<h2 class="bar" id="comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?></h2>
+	<div class="navigation">
+		<div class="next-posts"><?php previous_comments_link() ?></div>
+		<div class="prev-posts"><?php next_comments_link() ?></div>
+	</div>
 
-		<div class="navigation">
-			<div class="next-posts"><?php previous_comments_link() ?></div>
-			<div class="prev-posts"><?php next_comments_link() ?></div>
-		</div>
+	<ol class="commentlist">
+		<?php wp_list_comments(); ?>
+	</ol>
 
-		<ol class="commentlist">
-			<?php wp_list_comments('avatar_size=100&type=comment'); ?>
-		</ol>
+	<div class="navigation">
+		<div class="next-posts"><?php previous_comments_link() ?></div>
+		<div class="prev-posts"><?php next_comments_link() ?></div>
+	</div>
+	
+ <?php else : // this is displayed if there are no comments so far ?>
 
-		<div class="navigation">
-			<div class="next-posts"><?php previous_comments_link() ?></div>
-			<div class="prev-posts"><?php next_comments_link() ?></div>
-		</div>
-		
-	 <?php else : // this is displayed if there are no comments so far ?>
+	<?php if ( comments_open() ) : ?>
+		<!-- If comments are open, but there are no comments. -->
 
-		<?php if ( comments_open() ) : ?>
-			<!-- If comments are open, but there are no comments. -->
-			<h2>Be the first to comment!</h2>
+	 <?php else : // comments are closed ?>
+		<p>Comments are closed.</p>
 
-		 <?php else : // comments are closed ?>
-			<h2>Comments are closed.</h2>
-
-		<?php endif; ?>
-		
 	<?php endif; ?>
-
-</div>
+	
+<?php endif; ?>
 
 <?php if ( comments_open() ) : ?>
 
-<div id="respond" class="main">
+<div id="respond">
 
-	<h2 class="bar"><?php comment_form_title( 'Leave a Reply', 'Leave a Reply to %s' ); ?></h2>
+	<h2><?php comment_form_title( 'Leave a Reply', 'Leave a Reply to %s' ); ?></h2>
 
 	<div class="cancel-comment-reply">
 		<?php cancel_comment_reply_link(); ?>
@@ -68,25 +63,32 @@
 		<?php else : ?>
 
 			<div>
-				<input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" placeholder="Name <?php if ($req) echo "(required)"; ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
-			</div>
-
-			<div class="comment-spacer">
-				<input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" placeholder="Email <?php if ($req) echo "(required)"; ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+				<input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+				<label for="author">Name <?php if ($req) echo "(required)"; ?></label>
 			</div>
 
 			<div>
-				<input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" placeholder="Website" size="22" tabindex="3" />
+				<input type="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+				<label for="email">Mail (will not be published) <?php if ($req) echo "(required)"; ?></label>
 			</div>
 
-			<div class="clear"></div>
+			<div>
+				<input type="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3" />
+				<label for="url">Website</label>
+			</div>
 
 		<?php endif; ?>
 
-			<textarea name="comment" id="comment" placeholder="Enter Your Comment" cols="58" rows="10" tabindex="4"></textarea>
+		<!--<p>You can use these tags: <code><?php echo allowed_tags(); ?></code></p>-->
 
+		<div>
+			<textarea name="comment" id="comment" cols="58" rows="10" tabindex="4"></textarea>
+		</div>
+
+		<div>
 			<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
 			<?php comment_id_fields(); ?>
+		</div>
 		
 		<?php do_action('comment_form', $post->ID); ?>
 

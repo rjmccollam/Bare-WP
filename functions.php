@@ -27,86 +27,21 @@
     	));
     }
 
-    // Excerpt Customizations
-    function new_excerpt_more( $more ) {
-        return '...';
+    // Add Read More link to excerpt
+    function new_excerpt_more($more) {
+        global $post;
+        return '… <a class="read-more" href="'. get_permalink($post->ID) . '">' . 'Read More &raquo;' . '</a>';
     }
     add_filter('excerpt_more', 'new_excerpt_more');
 
-    function excerpt($limit) {
-      $excerpt = explode(' ', get_the_excerpt(), $limit);
-      if (count($excerpt)>=$limit) {
-        array_pop($excerpt);
-        $excerpt = implode(" ",$excerpt).'...';
-      } else {
-        $excerpt = implode(" ",$excerpt);
-      } 
-      $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
-      return $excerpt;
-    }
-     
-    function content($limit) {
-      $content = explode(' ', get_the_content(), $limit);
-      if (count($content)>=$limit) {
-        array_pop($content);
-        $content = implode(" ",$content).'...';
-      } else {
-        $content = implode(" ",$content);
-      } 
-      $content = preg_replace('/\[.+\]/','', $content);
-      $content = apply_filters('the_content', $content); 
-      $content = str_replace(']]>', ']]&gt;', $content);
-      return $content;
-    }
 
     // Add Featured Image support
     add_theme_support( 'post-thumbnails' );
 
-    add_image_size( 'home-page-half', 115, 90, true );
-    add_image_size( 'home-page-full', 155, 110, true );
-
     // Custom Menus
     register_nav_menus( array(
         'main_menu' => 'Main Menu',
-        'top_menu' => 'Top Menu',
-        'affiliate_menu_left' => 'Left Affiliate Menu',
-        'affiliate_menu_right' => 'Right Affiliate Menu'
+        'sub_menu' => 'Sub Menu'
     ));
-
-    // Extra Author Information Fields
-    add_action( 'show_user_profile', 'my_show_extra_profile_fields' );
-    add_action( 'edit_user_profile', 'my_show_extra_profile_fields' );
-
-    function my_show_extra_profile_fields( $user ) { ?>
-
-      <h3>Extra profile information</h3>
-
-      <table class="form-table">
-
-        <tr>
-          <th><label for="twitter">Twitter</label></th>
-
-          <td>
-            <input type="text" name="twitter" id="twitter" value="<?php echo esc_attr( get_the_author_meta( 'twitter', $user->ID ) ); ?>" class="regular-text" /><br />
-            <span class="description">Please enter your Twitter username.</span>
-          </td>
-        </tr>
-
-      </table>
-
-    <?php }
-
-    // Save and post the extra author information
-    add_action( 'personal_options_update', 'my_save_extra_profile_fields' );
-    add_action( 'edit_user_profile_update', 'my_save_extra_profile_fields' );
-
-    function my_save_extra_profile_fields( $user_id ) {
-
-      if ( !current_user_can( 'edit_user', $user_id ) )
-        return false;
-
-      /* Copy and paste this line for additional fields. Make sure to change 'twitter' to the field ID. */
-      update_usermeta( $user_id, 'twitter', $_POST['twitter'] );
-    }
 
 ?>

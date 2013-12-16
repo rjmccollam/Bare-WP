@@ -1,37 +1,20 @@
 <?php get_header(); ?>
 
-	<div id="content" class="left">
-
 	<?php if (have_posts()) : ?>
 
-		<div class="main">
-
-			<h1>Search Results</h1>
-
-		</div>
+		<h1>Search Results</h1>
 
 		<?php while (have_posts()) : the_post(); ?>
 
-			<div class="post full">
+			<div class="post">
 
-				<?php 
-				    if ( has_post_thumbnail() ) { 
-				        the_post_thumbnail( 'home-page-full', array(
-							'class'	=> "attachment img-left")); 
-				    } 
-				?>
-
-				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				<h2><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 
 				<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
 
-				<?php echo excerpt(55); ?>
+				<?php the_excerpt(); ?>
 
-				<a class="read-more right" href="<?php the_permalink(); ?>">Read More</a> <div class="read-more-bg"></div>
-
-				<div class="clear"></div>
-
-			</div>
+			</div><!-- end post -->
 
 		<?php endwhile; ?>
 
@@ -39,15 +22,9 @@
 
 	<?php else : ?>
 
-		<div class="main">
-
-			<h1>No Articles Found</h1>
-
-		</div>
+		<h2>No posts found.</h2>
 
 	<?php endif; ?>
-
-	</div>
 
 <?php get_sidebar(); ?>
 

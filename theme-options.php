@@ -15,7 +15,7 @@ function theme_options_init(){
  * Load up the menu page
  */
 function theme_options_add_page() {
-	add_theme_page( __( 'Theme Options', 'phoenixbites' ), __( 'Theme Options', 'phoenixbites' ), 'edit_theme_options', 'theme_options', 'theme_options_do_page' );
+	add_theme_page( __( 'Theme Options', 'enter_theme_name' ), __( 'Theme Options', 'enter_theme_name' ), 'edit_theme_options', 'theme_options', 'theme_options_do_page' );
 }
 
 /**
@@ -29,10 +29,10 @@ function theme_options_do_page() {
 
 	?>
 	<div class="wrap" style="width: 960px;">
-		<?php screen_icon(); echo "<h2>" . get_current_theme() . __( ' Theme Options', 'phoenixbites' ) . "</h2>"; ?>
+		<?php screen_icon(); echo "<h2>" . get_current_theme() . __( ' Theme Options', 'enter_theme_name' ) . "</h2>"; ?>
 
 		<?php if ( false !== $_REQUEST['settings-updated'] ) : ?>
-		<div class="updated fade"><p><strong><?php _e( 'Options saved', 'phoenixbites' ); ?></strong></p></div>
+		<div class="updated fade"><p><strong><?php _e( 'Options saved', 'enter_theme_name' ); ?></strong></p></div>
 		<?php endif; ?>
 
 		<form method="post" action="options.php">
@@ -45,118 +45,31 @@ function theme_options_do_page() {
 					<td colspan="2"><h2>Header</h2><p>Insert your content below to populate your header</p></td>
 				</tr>
 				
-				<tr valign="top"><th scope="row"><?php _e( 'Ad Image', 'phoenixbites' ); ?></th>
+				<tr valign="top"><th scope="row"><?php _e( 'Black Box Title', 'enter_theme_name' ); ?></th>
 					<td>
-						<input id="wedodev_theme_options[ad-img]" class="regular-text" type="text" name="wedodev_theme_options[ad-img]" value="<?php esc_attr_e( $options['ad-img'] ); ?>" />
-						<label class="description" for="wedodev_theme_options[ad-img]"><?php _e( 'Insert the image URL (image should be 728px X 90px)', 'phoenixbites' ); ?></label>
+						<input id="wedodev_theme_options[bb-title]" class="regular-text" type="text" name="wedodev_theme_options[bb-title]" value="<?php esc_attr_e( $options['bb-title'] ); ?>" />
+						<label class="description" for="wedodev_theme_options[bb-title]"><?php _e( 'Insert your title', 'enter_theme_name' ); ?></label>
 					</td>
 				</tr>
 
-				<tr valign="top"><th scope="row"><?php _e( 'Ad Link', 'phoenixbites' ); ?></th>
+				<tr valign="top"><th scope="row"><?php _e( 'Black Box Subtitle', 'enter_theme_name' ); ?></th>
 					<td>
-						<input id="wedodev_theme_options[ad-link]" class="regular-text" type="text" name="wedodev_theme_options[ad-link]" value="<?php esc_attr_e( $options['ad-link'] ); ?>" />
-						<label class="description" for="wedodev_theme_options[ad-link]"><?php _e( 'Insert your URL', 'phoenixbites' ); ?></label>
-					</td>
-				</tr>
-				
-			</table>
-
-			<p class="submit">
-				<input type="submit" class="button-primary" value="<?php _e( 'Save Options', 'phoenixbites' ); ?>" />
-			</p>
-
-			<table class="form-table">
-				
-				<tr>
-					<td colspan="2"><h2>Sidebar</h2><p>Insert your content below to populate your sidebar</p></td>
-				</tr>
-				
-				<tr valign="top"><th scope="row"><?php _e( 'Facebook', 'phoenixbites' ); ?></th>
-					<td>
-						<input id="wedodev_theme_options[fb]" class="regular-text" type="text" name="wedodev_theme_options[fb]" value="<?php esc_attr_e( $options['fb'] ); ?>" />
-						<label class="description" for="wedodev_theme_options[fb]"><?php _e( 'Insert your profile URL', 'phoenixbites' ); ?></label>
+						<input id="wedodev_theme_options[bb-subtitle]" class="regular-text" type="text" name="wedodev_theme_options[bb-subtitle]" value="<?php esc_attr_e( $options['bb-subtitle'] ); ?>" />
+						<label class="description" for="wedodev_theme_options[bb-subtitle]"><?php _e( 'Insert your subtitle', 'enter_theme_name' ); ?></label>
 					</td>
 				</tr>
 
-				<tr valign="top"><th scope="row"><?php _e( 'Twitter', 'phoenixbites' ); ?></th>
+				<tr valign="top"><th scope="row"><?php _e( 'Black Box Content', 'enter_theme_name' ); ?></th>
 					<td>
-						<input id="wedodev_theme_options[twitter]" class="regular-text" type="text" name="wedodev_theme_options[twitter]" value="<?php esc_attr_e( $options['twitter'] ); ?>" />
-						<label class="description" for="wedodev_theme_options[twitter]"><?php _e( 'Insert your profile URL', 'phoenixbites' ); ?></label>
-					</td>
-				</tr>
-
-				<tr valign="top"><th scope="row"><?php _e( 'Pinterest', 'phoenixbites' ); ?></th>
-					<td>
-						<input id="wedodev_theme_options[pinterest]" class="regular-text" type="text" name="wedodev_theme_options[pinterest]" value="<?php esc_attr_e( $options['pinterest'] ); ?>" />
-						<label class="description" for="wedodev_theme_options[pinterest]"><?php _e( 'Insert your profile URL', 'phoenixbites' ); ?></label>
-					</td>
-				</tr>
-
-				<tr valign="top"><th scope="row"><?php _e( 'RSS', 'phoenixbites' ); ?></th>
-					<td>
-						<input id="wedodev_theme_options[rss]" class="regular-text" type="text" name="wedodev_theme_options[rss]" value="<?php esc_attr_e( $options['rss'] ); ?>" />
-						<label class="description" for="wedodev_theme_options[rss]"><?php _e( 'Insert your RSS URL', 'phoenixbites' ); ?></label>
+						<textarea id="wedodev_theme_options[bb-content]" class="large-text" cols="50" rows="5" name="wedodev_theme_options[bb-content]"><?php echo esc_textarea( $options['bb-content'] ); ?></textarea>
+						<label class="description" for="wedodev_theme_options[bb-content]"><?php _e( 'Insert your content', 'enter_theme_name' ); ?></label>
 					</td>
 				</tr>
 				
 			</table>
 
 			<p class="submit">
-				<input type="submit" class="button-primary" value="<?php _e( 'Save Options', 'phoenixbites' ); ?>" />
-			</p>
-
-			<table class="form-table">
-				
-				<tr>
-					<td colspan="2"><h2>Footer</h2><p>Insert your content below to populate your footer</p></td>
-				</tr>
-
-				<tr valign="top"><th scope="row"><?php _e( 'Privacy Policy Link', 'phoenixbites' ); ?></th>
-					<td>
-						<input id="wedodev_theme_options[privacy-link]" class="regular-text" type="text" name="wedodev_theme_options[privacy-link]" value="<?php esc_attr_e( $options['privacy-link'] ); ?>" />
-						<label class="description" for="wedodev_theme_options[privacy-link]"><?php _e( 'Insert the URL', 'phoenixbites' ); ?></label>
-					</td>
-				</tr>
-
-				<tr valign="top"><th scope="row"><?php _e( 'Disclosure Policy Link Link', 'phoenixbites' ); ?></th>
-					<td>
-						<input id="wedodev_theme_options[disclosure-link]" class="regular-text" type="text" name="wedodev_theme_options[disclosure-link]" value="<?php esc_attr_e( $options['disclosure-link'] ); ?>" />
-						<label class="description" for="wedodev_theme_options[disclosure-link]"><?php _e( 'Insert the URL', 'phoenixbites' ); ?></label>
-					</td>
-				</tr>
-
-				<tr valign="top"><th scope="row"><?php _e( 'Sitemap Link', 'phoenixbites' ); ?></th>
-					<td>
-						<input id="wedodev_theme_options[sitemap-link]" class="regular-text" type="text" name="wedodev_theme_options[sitemap-link]" value="<?php esc_attr_e( $options['sitemap-link'] ); ?>" />
-						<label class="description" for="wedodev_theme_options[sitemap-link]"><?php _e( 'Insert the URL', 'phoenixbites' ); ?></label>
-					</td>
-				</tr>
-				
-				<tr valign="top"><th scope="row"><?php _e( 'About Image', 'phoenixbites' ); ?></th>
-					<td>
-						<input id="wedodev_theme_options[about-img]" class="regular-text" type="text" name="wedodev_theme_options[about-img]" value="<?php esc_attr_e( $options['about-img'] ); ?>" />
-						<label class="description" for="wedodev_theme_options[about-img]"><?php _e( 'Insert the image URL (image should be 140px X 115px)', 'phoenixbites' ); ?></label>
-					</td>
-				</tr>
-
-				<tr valign="top"><th scope="row"><?php _e( 'Find Out More Link', 'phoenixbites' ); ?></th>
-					<td>
-						<input id="wedodev_theme_options[about-link]" class="regular-text" type="text" name="wedodev_theme_options[about-link]" value="<?php esc_attr_e( $options['about-link'] ); ?>" />
-						<label class="description" for="wedodev_theme_options[about-link]"><?php _e( 'Insert the URL', 'phoenixbites' ); ?></label>
-					</td>
-				</tr>
-
-				<tr valign="top"><th scope="row"><?php _e( 'About Content', 'phoenixbites' ); ?></th>
-					<td>
-						<textarea id="wedodev_theme_options[about-content]" class="large-text" cols="50" rows="5" name="wedodev_theme_options[about-content]"><?php echo esc_textarea( $options['about-content'] ); ?></textarea>
-						<label class="description" for="wedodev_theme_options[about-content]"><?php _e( 'Insert your content', 'phoenixbites' ); ?></label>
-					</td>
-				</tr>
-				
-			</table>
-
-			<p class="submit">
-				<input type="submit" class="button-primary" value="<?php _e( 'Save Options', 'phoenixbites' ); ?>" />
+				<input type="submit" class="button-primary" value="<?php _e( 'Save Options', 'enter_theme_name' ); ?>" />
 			</p>
 			
 		</form>
