@@ -6,8 +6,6 @@
 
 		<?php the_content(); ?>
 
-		<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>		
-
 	<?php endwhile; endif; ?>
 
 <?php get_sidebar(); ?>

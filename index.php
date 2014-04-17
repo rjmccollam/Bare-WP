@@ -8,7 +8,7 @@
 
 			<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 
-			<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
+			<?php include (TEMPLATEPATH . '/partials/meta.php' ); ?>
 
 			<div class="entry">
 				<?php the_content(); ?>
@@ -24,7 +24,7 @@
 
 	<?php endwhile; ?>
 
-	<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
+	<?php include (TEMPLATEPATH . '/partials/nav.php' ); ?>
 
 	<?php else : ?>
 

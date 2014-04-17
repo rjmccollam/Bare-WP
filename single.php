@@ -4,11 +4,9 @@
 			
 		<h1><?php the_title(); ?></h1>
 			
-		<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
+		<?php include (TEMPLATEPATH . '/partials/meta.php' ); ?>
 
 		<?php the_content(); ?>
-
-		<?php edit_post_link('Edit this entry','','.'); ?>		
 
 		<?php comments_template(); ?>
 

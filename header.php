@@ -36,6 +36,10 @@
 	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
+	<!--[if lt IE 9]>
+		<script src="<?php bloginfo('template_url'); ?>/js/html5shiv.js"></script>
+	<![endif]-->
+
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
 	<?php wp_head(); ?>

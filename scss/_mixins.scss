@@ -1,0 +1,41 @@
+// Transition
+@mixin transition ($properties...) {
+	transition: $properties .3s ease-out;
+	-webkit-transition: $properties .3s ease-out;
+	-moz-transition: $properties .3s ease-out;
+	-ms-transition: $properties .3s ease-out;
+	-o-transition: $properties .3s ease-out;
+}
+
+// Sprite
+@mixin sprite ($x, $y, $height, $width) {
+	background: url(images/sprite.png) $x $y no-repeat;
+	height: $height;
+	width: $width;
+}
+
+// Retina Sprite
+@mixin retina-sprite() {
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+		background-image: url(images/sprite@2x.png); background-size: 1000px 1000px;
+	}
+}
+
+// Top to Bottom Gradient
+@mixin top-gradient ($top, $bottom) {
+	background-color: $bottom; 
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($top), to($bottom));
+    background-image: -webkit-linear-gradient(top, $top, $bottom); 
+    background-image:    -moz-linear-gradient(top, $top, $bottom);
+    background-image:     -ms-linear-gradient(top, $top, $bottom);
+    background-image:      -o-linear-gradient(top, $top, $bottom);
+}
+
+// Basic CSS Scale
+@mixin scale ($value) {
+	-webkit-transform: scale($value);
+    -moz-transform:    scale($value);
+    -ms-transform:     scale($value);
+    -o-transform:      scale($value);
+    transform:         scale($value);
+}

@@ -1,4 +1,15 @@
 <?php
+
+    // Theme Scripts & Styles
+    function theme_scripts() {
+        wp_enqueue_style( 'main', get_stylesheet_uri() );
+        wp_enqueue_style( 'open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,300,700' );
+        wp_deregister_script('jquery'); 
+        wp_register_script('jquery', ("http".($_SERVER['SERVER_PORT'] == 443 ? "s" : "")."://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"), true, '1.11.0');
+        wp_enqueue_script('jquery');
+        wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'), '1.0.0', true );
+    }
+    add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 	
 	// Add RSS links to <head> section
 	automatic_feed_links();

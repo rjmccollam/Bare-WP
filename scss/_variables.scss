@@ -1,0 +1,36 @@
+/*    Fonts
+-------------------------------------------------------------- */
+$primary-font: "Lato", helvetica, arial, sans-serif;
+$secondary-font: "Open Sans", verdana, tahoma, sans-serif;
+$tertiary-font: "Oswald", verdana, tahoma, sans-serif;
+
+
+/*    Colors
+-------------------------------------------------------------- */
+
+// General
+$black: #000;
+$white: #fff;
+$bg: #fff;
+
+// Typography
+$text-color: #222; // used for main body text
+$h1: #222; // used for <h1>'s
+$h2: #222; // used for <h2>'s
+$h3: #222; // used for <h3>'s
+$link: #f00; // main link color
+$link-hover: #222; // main link hover color
+
+
+
+/*    Units
+-------------------------------------------------------------- */
+
+// Typography
+$font-size: .875rem; // used for main body text
+$line-height: 1.125rem; // used for line-height on main body text
+$h1-size: 2.5rem; // used for size of content <h1>
+$h2-size: 2rem; // used for size of content <h2>
+$h3-size: 1.5rem; // used for size of content <h3>
+
+// Breakpoints
