@@ -321,14 +321,6 @@
 	],
 "lastSavedByUser": "RJ McCollam",
 "manualImportLinks": {
-	"\/js\/scripts.js": [
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/js\/retina1.3.js",
-			"position": 0,
-			"type": 0
-			}
-		]
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
