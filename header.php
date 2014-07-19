@@ -6,10 +6,6 @@
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>">
 
 	<meta name="viewport" content="width=device-width">
-	
-	<?php if (is_search()) { ?>
-	   <meta name="robots" content="noindex, nofollow"> 
-	<?php } ?>
 
 	<title>
 		   <?php
@@ -23,7 +19,7 @@
 		         wp_title(''); echo ' - '; }
 		      elseif (is_404()) {
 		         echo 'Not Found - '; }
-		      if (is_home()) {
+		      if (is_home() || is_front_page()) {
 		         bloginfo('name'); echo ' - '; bloginfo('description'); }
 		      else {
 		          bloginfo('name'); }
@@ -35,10 +31,6 @@
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">
 	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-
-	<!--[if lt IE 9]>
-		<script src="<?php bloginfo('template_url'); ?>/js/html5shiv.js"></script>
-	<![endif]-->
 
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 

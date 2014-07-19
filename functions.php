@@ -3,16 +3,37 @@
     // Theme Scripts & Styles
     function theme_scripts() {
         wp_enqueue_style( 'main', get_stylesheet_uri() );
-        wp_enqueue_style( 'open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,300,700' );
+        wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,300,700' );
         wp_deregister_script('jquery'); 
-        wp_register_script('jquery', ("http".($_SERVER['SERVER_PORT'] == 443 ? "s" : "")."://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"), true, '1.11.0');
+        wp_register_script('jquery', ("http".($_SERVER['SERVER_PORT'] == 443 ? "s" : "")."://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"), true, '1.11.1');
         wp_enqueue_script('jquery');
         wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'), '1.0.0', true );
     }
     add_action( 'wp_enqueue_scripts', 'theme_scripts' );
+
+    // Theme Options
+    if ( !function_exists( 'of_get_option' ) ) {
+        function of_get_option($name, $default = false) {
+
+            $optionsframework_settings = get_option('optionsframework');
+
+            // Gets the unique option id
+            $option_name = $optionsframework_settings['id'];
+
+            if ( get_option($option_name) ) {
+                $options = get_option($option_name);
+            }
+
+            if ( isset($options[$name]) ) {
+                return $options[$name];
+            } else {
+                return $default;
+            }
+        }
+    }
 	
 	// Add RSS links to <head> section
-	automatic_feed_links();
+	add_theme_support( 'automatic-feed-links' );
 	
 	// Clean up the <head>
 	function removeHeadLinks() {
@@ -21,9 +42,6 @@
     }
     add_action('init', 'removeHeadLinks');
     remove_action('wp_head', 'wp_generator');
-
-    // Theme Options
-    require_once ( get_template_directory() . '/theme-options.php' );
     
     // Sidebar Widgets
     if (function_exists('register_sidebar')) {
@@ -52,7 +70,7 @@
     // Custom Menus
     register_nav_menus( array(
         'main_menu' => 'Main Menu',
-        'sub_menu' => 'Sub Menu'
+        'footer_menu' => 'Footer Menu'
     ));
 
 ?>

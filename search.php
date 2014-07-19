@@ -6,15 +6,15 @@
 
 		<?php while (have_posts()) : the_post(); ?>
 
-			<div class="post">
-
+			<article class="post">
+				
 				<h2><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-
+				
 				<?php include (TEMPLATEPATH . '/partials/meta.php' ); ?>
 
 				<?php the_excerpt(); ?>
 
-			</div><!-- end post -->
+			</article><!-- end post -->
 
 		<?php endwhile; ?>
 

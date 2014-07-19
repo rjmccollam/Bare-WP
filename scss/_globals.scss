@@ -1,5 +1,5 @@
 body {background: $bg; font-family: $primary-font; font-size: $font-size; line-height: $line-height; color: $text-color;}
-.container {width: 90%; max-width: 978px; margin: 0 auto; position: relative;}
+.container {width: 90%; max-width: 1200px; margin: 0 auto; position: relative;}
 
 .right {float: right;}
 .left {float: left;}
@@ -18,4 +18,4 @@ h2 {font-family: $primary-font; font-size: $h2-size; line-height: 1.1em; color: 
 h3 {font-family: $tertiary-font; font-size: $h3-size; line-height: 1.1em; color: $h3; font-weight: 400;}
 
 .img-left {float: left; margin: 5px 15px 5px 0;}
-.img-right {float: right; margin: 5px 0 5px 15px}
+.img-right {float: right; margin: 5px 0 5px 15px;}
