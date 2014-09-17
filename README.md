@@ -2,6 +2,8 @@
 
 A starting point for WordPress development projects.
 
+Setting up the Bate WP Theme in CodeKit - https://www.youtube.com/watch?v=Rjcw-pJLB3E
+
 ##CodeKit
 I use CodeKit to handle all of my tasks as I work. It compiles my Sass, concatonates and minifies my javascript, and a whole bunch of other stuff. I have included my codekit.config in this repo so it can be as easy as dragging the project folder into CodeKit and then you are up and running. If you don't have CodeKit you can purchase it here https://incident57.com/codekit/
 
