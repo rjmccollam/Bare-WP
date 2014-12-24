@@ -102,7 +102,7 @@ function optionsframework_options() {
 	$options = array();
 
 	$options[] = array(
-		'name' => __('General Settings', 'options_check'),
+		'name' => __('General', 'options_check'),
 		'type' => 'heading');
 
 	$options[] = array(
@@ -125,6 +125,12 @@ function optionsframework_options() {
 		'id' => 'example_select_pages',
 		'type' => 'select',
 		'options' => $options_pages);
+
+	$options[] = array(
+		'name' => __('Uploader Test', 'options_check'),
+		'desc' => __('Upload your image.', 'options_check'),
+		'id' => 'example_uploader',
+		'type' => 'upload');
 
 	$wp_editor_settings = array(
 		'wpautop' => true, // Default
