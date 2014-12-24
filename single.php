@@ -4,7 +4,7 @@
 			
 		<h1><?php the_title(); ?></h1>
 			
-		<?php include (TEMPLATEPATH . '/partials/meta.php' ); ?>
+		<?php get_template_part('partials/nav' ); ?>
 
 		<?php the_content(); ?>
 
