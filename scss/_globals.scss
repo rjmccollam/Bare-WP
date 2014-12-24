@@ -1,4 +1,4 @@
-body {background: $bg; font-family: $primary-font; font-size: $font-size; line-height: $line-height; color: $text-color;}
+body {background: $bg; font-family: $primary-font; font-size: $font-size; line-height: $line-height; color: $text-color; -webkit-font-smoothing: antialiased !important;}
 .container {width: 90%; max-width: 1200px; margin: 0 auto; position: relative;}
 
 .right {float: right;}
