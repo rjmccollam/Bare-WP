@@ -6,7 +6,7 @@
 
  			<h1>
 
-				<?php if (is_category()) { ?>Archive for the &#8216;<?php single_cat_title(); ?>&#8217; Category
+				<?php if (is_category()) { ?><?php single_cat_title(); ?>
 
 				<?php } elseif( is_tag() ) { ?>Posts Tagged &#8216;<?php single_tag_title(); ?>&#8217;
 

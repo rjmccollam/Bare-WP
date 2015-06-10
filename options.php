@@ -106,40 +106,40 @@ function optionsframework_options() {
 		'type' => 'heading');
 
 	$options[] = array(
-		'name' => __('Input Text', 'options_check'),
-		'desc' => __('A text input field.', 'options_check'),
+		'name' => __('Text', 'options_check'),
+		'desc' => __('Enter your text.', 'options_check'),
 		'id' => 'example_text',
 		'std' => '',
 		'type' => 'text');
 
 	$options[] = array(
 		'name' => __('Textarea', 'options_check'),
-		'desc' => __('Textarea description.', 'options_check'),
+		'desc' => __('Enter your text.', 'options_check'),
 		'id' => 'example_textarea',
 		'std' => '',
 		'type' => 'textarea');
 
 	$options[] = array(
-		'name' => __('Select a Page', 'options_check'),
-		'desc' => __('Passed an array of pages with ID and post_title', 'options_check'),
+		'name' => __('Page', 'options_check'),
+		'desc' => __('Select a page.', 'options_check'),
 		'id' => 'example_select_pages',
 		'type' => 'select',
 		'options' => $options_pages);
 
 	$options[] = array(
-		'name' => __('Uploader Test', 'options_check'),
+		'name' => __('Uploader', 'options_check'),
 		'desc' => __('Upload your image.', 'options_check'),
 		'id' => 'example_uploader',
 		'type' => 'upload');
 
 	$wp_editor_settings = array(
-		'wpautop' => true, // Default
-		'textarea_rows' => 5,
+		'wpautop' => false, 
+		'textarea_rows' => 15
 	);
 
 	$options[] = array(
-		'name' => __('Additional Text Editor', 'options_check'),
-		'desc' => sprintf( __( 'This editor includes media button.', 'options_check' ), 'http://codex.wordpress.org/Function_Reference/wp_editor' ),
+		'name' => __('Editor', 'options_check'),
+		'desc' => sprintf( __( 'Enter your content.', 'options_check' ), 'http://codex.wordpress.org/Function_Reference/wp_editor' ),
 		'id' => 'example_editor_media',
 		'type' => 'editor',
 		'settings' => $wp_editor_settings );

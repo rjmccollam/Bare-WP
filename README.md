@@ -17,9 +17,9 @@ retina.js is prepended to scripts.js and will handle all of your inline retina i
 For theme options I use the options framework plugin so you will find references to that in functions.php as well as find options.php. This is a very useful/full featured framework. You can learn more about it here https://github.com/devinsays/options-framework-plugin.
 
 ##Versions
-jQuery v1.11.1 (loaded via Google's CDN)
+jQuery v1.11.3 (loaded via Google's CDN)
 retina.js v1.3.0
-Options Framework v1.8.3
+Options Framework v1.8.4
 
 ####Just looking for good ol' HTML?
 You can find just the HTML counterpart at https://github.com/rjmccollam/Bare-HTML. Since most of the work I do is WordPress related the HTML version is not always up to date with changes that I have made here.

@@ -1,7 +1,7 @@
 // Mobile Nav
 var $menu = $('#nav'),
-	$menulink = $('.menu-link'),
-	$menuTrigger = $('.menu-item-has-children > a');
+	  $menulink = $('.menu-link'),
+	  $menuTrigger = $('.menu-item-has-children > a');
 
 $menulink.click(function(e) {
 	e.preventDefault();

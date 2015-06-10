@@ -4,15 +4,15 @@
 	Author: WeDoDev
 	Author URI: http://www.wedodev.com/
 	Description: A custom WordPress theme designed and developed specifically for [INSERT COMPANY NAME].
-	Version: 1.1
+	Version: 1.2
 */
 
 // Partials
-@import "_reset.scss";
-@import "_variables.scss";
-@import "_mixins.scss";
-@import "_globals.scss";
-@import "_wordpress.scss";
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "globals";
+@import "wordpress";
 
 
 
@@ -27,8 +27,7 @@
 	@media screen and (max-width: $med-bp) {display: block;}
 }
 .nav {
-	@media screen and (max-width: $med-bp) {
-		& {clear: both; min-width: inherit; float: none; overflow: hidden; max-height: 0;}
+	@media screen and (max-width: $med-bp) {clear: both; min-width: inherit; float: none; overflow: hidden; max-height: 0;
 		&.active {max-height: 100%;}
 		li.menu-item-has-children > a:after {content: '+'; position: absolute; top: 0; right: 0; display: block; font-size: 1.5em; padding: 10px;}
 		li.menu-item-has-children > a.active:after {content: "-";}
@@ -39,9 +38,7 @@
 		li {display: inline-block;
 			@media screen and (max-width: $med-bp) {display: block;}
 			a {
-				@media screen and (max-width: $med-bp) {
-					& {display: block; padding: 10px; border-bottom: 1px solid $white; position: relative;}
-				}
+				@media screen and (max-width: $med-bp) {display: block; padding: 10px; border-bottom: 1px solid $white; position: relative;}
 				&:hover {}
 			}
 			&:hover > ul {display: block;}
@@ -50,17 +47,14 @@
 			}
 		}
 		ul {display: none; position: absolute; top:100%; min-width: 160px;
-			@media screen and (max-width: $med-bp) {
-				& {overflow: hidden; max-height: 0; display: inherit; position: relative; left: auto; top:auto; box-shadow: none; border:none;}
+			@media screen and (max-width: $med-bp) {overflow: hidden; max-height: 0; display: inherit; position: relative; left: auto; top:auto; box-shadow: none; border:none;
 				&.active {max-height: 100%;}
 			}
 			&> li {position: relative; display: block;
-				a {padding: 10px 20px; height: auto;
-					&:hover {}
-				}
+				a {padding: 10px 20px; height: auto;}
 			}
 			ul {position: absolute; left: 100%; top:0;
-				@media screen and (max-width: $med-bp) {display: inherit; position: relative; left: auto; top:auto; box-shadow: none; border:none;}
+				@media screen and (max-width: $med-bp) {display: inherit; position: relative; left: auto; top:auto; border:none;}
 			}
 		}
 	}
