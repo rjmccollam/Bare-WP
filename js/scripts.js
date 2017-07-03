@@ -1,16 +1,20 @@
-// Mobile Nav
-var $menu = $('#nav'),
-	  $menulink = $('.menu-link'),
-	  $menuTrigger = $('.menu-item-has-children > a');
+jQuery(function($) {
 
-$menulink.click(function(e) {
-	e.preventDefault();
-	$menulink.toggleClass('active');
-	$menu.toggleClass('active');
-});
+	// Mobile Nav
+	var $menu = $('#nav'),
+		  $menulink = $('.menu-link'),
+		  $menuTrigger = $('.menu-item-has-children > a');
 
-$menuTrigger.click(function(e) {
-	e.preventDefault();
-	var $this = $(this);
-	$this.toggleClass('active').next('ul').toggleClass('active');
+	$menulink.click(function(e) {
+		e.preventDefault();
+		$menulink.toggleClass('active');
+		$menu.toggleClass('active');
+	});
+
+	$menuTrigger.click(function(e) {
+		e.preventDefault();
+		var $this = $(this);
+		$this.toggleClass('active').next('ul').toggleClass('active');
+	});
+
 });

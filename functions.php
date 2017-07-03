@@ -2,34 +2,15 @@
 
     // Theme Scripts & Styles
     function theme_scripts() {
-        wp_enqueue_style( 'main', get_stylesheet_uri() );
+        wp_enqueue_style( 'main', get_stylesheet_uri(), array(), filemtime( get_template_directory() . '/style.css') );
         wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,300,700' );
-        wp_deregister_script('jquery'); 
-        wp_register_script('jquery', ("http".($_SERVER['SERVER_PORT'] == 443 ? "s" : "")."://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"), true, '1.11.3');
-        wp_enqueue_script('jquery');
-        wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'), '1.0.0', true );
+        wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'), filemtime( get_template_directory() . '/js/scripts.min.js'), true );
     }
     add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 
     // Theme Options
-    if ( !function_exists( 'of_get_option' ) ) {
-        function of_get_option($name, $default = false) {
-
-            $optionsframework_settings = get_option('optionsframework');
-
-            // Gets the unique option id
-            $option_name = $optionsframework_settings['id'];
-
-            if ( get_option($option_name) ) {
-                $options = get_option($option_name);
-            }
-
-            if ( isset($options[$name]) ) {
-                return $options[$name];
-            } else {
-                return $default;
-            }
-        }
+    if( function_exists('acf_add_options_page') ) {
+        acf_add_options_page();
     }
 
     // Add title tag to <head> section
@@ -61,18 +42,17 @@
     		'description'   => 'These are widgets for the sidebar.',
     		'before_widget' => '<div class="widget">',
     		'after_widget'  => '</div>',
-    		'before_title'  => '<h2>',
-    		'after_title'   => '</h2>'
+    		'before_title'  => '<h3>',
+    		'after_title'   => '</h3>'
     	));
     }
 
     // Add Read More link to excerpt
     function new_excerpt_more($more) {
         global $post;
-        return '… <a class="read-more" href="'. get_permalink($post->ID) . '">' . 'Read More &raquo;' . '</a>';
+        return '…';
     }
     add_filter('excerpt_more', 'new_excerpt_more');
-
 
     // Add Featured Image support
     add_theme_support( 'post-thumbnails' );

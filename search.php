@@ -1,14 +1,12 @@
 <?php get_header(); ?>
 
-	<?php if (have_posts()) : ?>
+	<h1>Search Results</h1>
 
-		<h1>Search Results</h1>
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<?php while (have_posts()) : the_post(); ?>
+		<?php get_template_part('partials/post'); ?>
 
-			<?php get_template_part('partials/post'); ?>
-
-		<?php endwhile; ?>
+	<?php endwhile; ?>
 
 		<?php get_template_part('partials/nav'); ?>
 

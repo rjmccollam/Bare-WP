@@ -6,10 +6,6 @@
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>">
 
 	<meta name="viewport" content="width=device-width">
-	
-	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-
-	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
 	<?php wp_head(); ?>
 	

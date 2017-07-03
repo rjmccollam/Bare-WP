@@ -1,4 +1,5 @@
-body {background: $bg; font-family: $primary-font; font-size: $font-size; line-height: $line-height; color: $text-color; -webkit-font-smoothing: antialiased !important;}
+html {overflow-x: hidden;}
+body {background: $bg; font-family: $primary-font; font-size: $font-size; line-height: $line-height; color: $text-color; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden;}
 .container {width: 90%; max-width: 1200px; margin: 0 auto; position: relative;}
 
 .right {float: right;}
@@ -13,9 +14,13 @@ a {color: $link; text-decoration: none; @include transition(all);
 	img {outline: none; border: none;}
 }
 
+iframe {max-width: 100%;}
+
 h1 {font-family: $secondary-font; font-size: $h1-size; line-height: 1.1em; color: $h1; font-weight: 400;}
 h2 {font-family: $primary-font; font-size: $h2-size; line-height: 1.1em; color: $h2; font-weight: 400;}
 h3 {font-family: $tertiary-font; font-size: $h3-size; line-height: 1.1em; color: $h3; font-weight: 400;}
 
 .img-left {float: left; margin: 5px 15px 5px 0;}
 .img-right {float: right; margin: 5px 0 5px 15px;}
+
+.button {}

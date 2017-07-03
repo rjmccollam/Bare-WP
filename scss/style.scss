@@ -4,7 +4,7 @@
 	Author: WeDoDev
 	Author URI: http://www.wedodev.com/
 	Description: A custom WordPress theme designed and developed specifically for [INSERT COMPANY NAME].
-	Version: 1.2
+	Version: 1.5
 */
 
 // Partials
@@ -62,8 +62,16 @@
 
 
 
-/*    Sidebar
+/*    Content
 -------------------------------------------------------------- */
+.content {
+	h2, h3, h4, h5, h6 {margin: 0 0 20px;}
+	p, form, iframe, blockquote, hr {margin: 0 0 40px;}
+	ul, ol {margin: 0 0 40px 30px;}
+	img {max-width: 100%; height: auto;
+		@media (max-width: $small-bp) {display: block; float: none; margin: 0 auto 20px;}
+	}
+}
 
 
 
