@@ -21,6 +21,14 @@
 		"oAP": "\/404.php",
 		"oF": 0
 		},
+	"\/acf-json\/group_595a6c680c298.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/acf-json\/group_595a6c680c298-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/archive.php": {
 		"ft": 8192,
 		"oA": 0,

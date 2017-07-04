@@ -57,6 +57,18 @@
     // Add Featured Image support
     add_theme_support( 'post-thumbnails' );
 
+    // Set Featured Image
+    function feat_image() {
+        if ( has_post_thumbnail() ) {
+            // Get the post thumbnail URL
+            $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+        } else {
+            // Get the default featured image in theme options
+            $feat_image = get_field('default_featured_image', 'option');
+        }
+        echo $feat_image;
+    }
+
     // Custom Menus
     register_nav_menus( array(
         'main_menu' => 'Main Menu',
