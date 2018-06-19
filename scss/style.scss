@@ -66,7 +66,7 @@
 
 /*    Content
 -------------------------------------------------------------- */
-.content {
+.content {padding: 100px 0 60px;
 	h2, h3, h4, h5, h6 {margin: 0 0 20px;}
 	p, form, iframe, blockquote, hr {margin: 0 0 40px;}
 	ul, ol {margin: 0 0 40px 30px;}
@@ -74,6 +74,30 @@
 		@media (max-width: $small-bp) {display: block; float: none; margin: 0 auto 20px;}
 	}
 }
+
+
+
+/*    Builder > Centered Content
+-------------------------------------------------------------- */
+.centered-content {text-align: center; padding: 100px 0;}
+
+
+
+/*    Builder > Image Callout
+-------------------------------------------------------------- */
+.image-callout {position: relative;
+	&.image-left {
+		.image {left: 0; right: inherit;}
+		.sub-content {float: right;}
+	}
+	.image {background-size: cover; background-position: center center; width: 50%; height: 100%; position: absolute; top: 0; right: 0;
+		@media (max-width: $med-bp) {position: relative; width: 100%; height: 250px;}
+	}
+	.sub-content {width: 48%; max-width: 560px; padding: 150px 0 115px;
+		@media (max-width: $med-bp) {float: none; width: 100%; padding: 80px 0; max-width: 100%;}
+	}
+}
+
 
 
 

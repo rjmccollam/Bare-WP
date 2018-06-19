@@ -31,11 +31,47 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"\/acf-json\/group_5b2960cb0a626.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/acf-json\/group_5b2960cb0a626-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/archive.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/archive.php",
+		"oF": 0
+		},
+	"\/builder\/builder.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/builder\/builder.php",
+		"oF": 0
+		},
+	"\/builder\/centered-content.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/builder\/centered-content.php",
+		"oF": 0
+		},
+	"\/builder\/content.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/builder\/content.php",
+		"oF": 0
+		},
+	"\/builder\/image-callout.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/builder\/image-callout.php",
 		"oF": 0
 		},
 	"\/comments.php": {
