@@ -75,4 +75,19 @@
         'footer_menu' => 'Footer Menu'
     ));
 
+    function login_logo() { ?>
+        <style type="text/css">
+            body {background: #fff9eb !important;}
+            body.wp-core-ui .button-primary {background: #be2126; border-color: #be2126 !important; text-shadow: none;}
+            body.wp-core-ui .button-primary:hover {background: #3d2217;}
+            body.login div#login h1 a {
+                background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logo.svg);
+                background-size: 215px;
+                width: 100%;
+                height: 100px;
+            }
+        </style>
+    <?php }
+    add_action( 'login_enqueue_scripts', 'login_logo' );
+
 ?>
