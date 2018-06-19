@@ -18,6 +18,7 @@
 
 /*    Header
 -------------------------------------------------------------- */
+.header {}
 
 
 
@@ -29,19 +30,20 @@
 .nav {
 	@media screen and (max-width: $med-bp) {clear: both; min-width: inherit; float: none; overflow: hidden; max-height: 0;
 		&.active {max-height: 100%;}
-		li.menu-item-has-children > a:after {content: '+'; position: absolute; top: 0; right: 0; display: block; font-size: 1.5em; padding: 10px;}
-		li.menu-item-has-children > a.active:after {content: "-";}
 	}
 	ul {list-style: none; position: relative;
 		@media screen and (max-width: $med-bp) {display: inline;}
 		&:after {content: ""; clear: both; display: block;}
-		li {display: inline-block;
+		li {display: inline-block; position: relative;
 			@media screen and (max-width: $med-bp) {display: block;}
 			a {
 				@media screen and (max-width: $med-bp) {display: block; padding: 10px; border-bottom: 1px solid $white; position: relative;}
 				&:hover {}
 			}
 			&:hover > ul {display: block;}
+			.carrot {display: none; position: absolute; top: 0; right: 0; font-size: 1.5em; padding: 10px; color: $link;
+				@media (max-width: $med-bp) {display: block;}
+			}
 			> & > ul.sub-menu {width: 100%; padding: 4px 0;
 				@media screen and (max-width: $med-bp) {padding: 0px;}
 			}
@@ -77,3 +79,4 @@
 
 /*    Footer
 -------------------------------------------------------------- */
+.footer {}

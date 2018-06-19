@@ -1,6 +1,14 @@
 jQuery(function($) {
 
-	// Mobile Nav
+	// Mobile Menu Dropdown
+	var carrot = '<span class="carrot">+</span>'
+
+	$('.nav .menu-item-has-children').append(carrot);
+	$('.nav .carrot').click(function(event) {
+		event.preventDefault();
+		$(this).parent().children('ul').toggleClass('active');
+	});
+
 	var $menu = $('#nav'),
 		  $menulink = $('.menu-link'),
 		  $menuTrigger = $('.menu-item-has-children > a');
@@ -9,12 +17,6 @@ jQuery(function($) {
 		e.preventDefault();
 		$menulink.toggleClass('active');
 		$menu.toggleClass('active');
-	});
-
-	$menuTrigger.click(function(e) {
-		e.preventDefault();
-		var $this = $(this);
-		$this.toggleClass('active').next('ul').toggleClass('active');
 	});
 
 });
