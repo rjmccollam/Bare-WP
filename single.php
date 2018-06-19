@@ -6,8 +6,6 @@
 
 		<?php the_content(); ?>
 
-		<?php comments_template(); ?>
-
 	<?php endwhile; endif; ?>
 	
 <?php get_sidebar(); ?>

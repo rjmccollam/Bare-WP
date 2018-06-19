@@ -74,13 +74,6 @@
 		"oAP": "\/builder\/image-callout.php",
 		"oF": 0
 		},
-	"\/comments.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/comments.php",
-		"oF": 0
-		},
 	"\/footer.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -318,19 +311,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/css\/_variables.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/scss\/_wordpress.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 5,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/css\/_wordpress.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1

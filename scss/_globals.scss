@@ -7,6 +7,10 @@ body {background: $bg; font-family: $primary-font; font-size: $font-size; line-h
 .clear {clear: both;}
 .clearfix:after {content: ""; display: block; clear: both;}
 
+.half {width: 48%;
+	@media (max-width: $med-bp) {width: 100%; float: none;}
+}
+
 .none {display: none;}
 
 a {color: $link; text-decoration: none; @include transition(all);
