@@ -8,22 +8,33 @@
 	<meta name="viewport" content="width=device-width">
 
 	<?php wp_head(); ?>
+
+	<?php the_field('header_scripts', 'option'); ?>
+
+	<style>
+		
+		<?php the_field('custom_css', 'option'); ?>
+
+	</style>
 	
 </head>
 
 <body <?php body_class(); ?>>
 
-<header class="header">
+<?php the_field('body_scripts', 'option'); ?>
+
+<header class="header clearfic">
+
+	<a href="<?php bloginfo('url'); ?>" class="logo left"><img src="<?php bloginfo('template_url'); ?>/images/logo.svg" title="<?php the_field('logo_title', 'option'); ?>" alt="<?php the_field('logo_alt_text', 'option'); ?>"></a>
 	
-	<a class="menu-link" href="#nav">&#9776; Menu</a>
+	<a class="menu-link right" href="#nav">&#9776; Menu</a>
 
 	<?php
 
 		$defaults = array(
-			'theme_location'  => 'main_menu',
 			'menu'            => 'Main Menu',
 			'container'       => 'nav',
-			'container_class' => 'nav',
+			'container_class' => 'nav right',
 			'container_id'    => 'nav',
 			'menu_class'      => ''
 		);
