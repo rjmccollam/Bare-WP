@@ -4,6 +4,9 @@ A starting point for WordPress development projects.
 
 Setting up the Bare WP Theme in CodeKit - https://www.youtube.com/watch?v=Rjcw-pJLB3E
 
+## Advanced Custom Fields
+I use this plugin to build out all of my wesbites and have some defaults set up that are used on every site I build. You will need this plugin installed or you will receive an error. The plugin has both a free and pro version. I use the pro version, but the free version will suffice as well.
+
 ## CodeKit
 I use CodeKit to handle all of my tasks as I work. It compiles my Sass, concatonates and minifies my javascript, and a whole bunch of other stuff. I have included my config.codekit3 in this repo so it can be as easy as dragging the project folder into CodeKit and then you are up and running. If you don't have CodeKit you can purchase it here https://codekitapp.com/.
 
