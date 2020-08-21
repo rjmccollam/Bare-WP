@@ -4,13 +4,13 @@
 
     	get_template_part('builder/content');
 
-    elseif( get_row_layout() == 'centered_content' ):
-
-    	get_template_part('builder/centered-content');
-
     elseif( get_row_layout() == 'image_callout' ):
 
     	get_template_part('builder/image-callout');
+
+    elseif( get_row_layout() == 'form_callout' ):
+
+    	get_template_part('builder/form-callout');
 
     endif;
 

@@ -1,4 +1,20 @@
 <div class="navigation">
-	<div class="next-posts left"><?php next_posts_link('&laquo; Older Entries') ?></div>
-	<div class="prev-posts right"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
+	
+	<?php
+
+		global $wp_query;
+
+		$big = 999999999; // need an unlikely integer
+
+		echo paginate_links( array(
+			'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+			'format' => '?paged=%#%',
+			'current' => max( 1, get_query_var('paged') ),
+			'total' => $wp_query->max_num_pages,
+			'prev_text' => 'Previous',
+			'next_text' => 'Next'
+		) );
+
+	?>
+
 </div>

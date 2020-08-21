@@ -1,0 +1,96 @@
+{
+    "key": "group_5afc3c4e99a2f",
+    "title": "Blog CTA",
+    "fields": [
+        {
+            "key": "field_5afc3c5dd01f7",
+            "label": "Hide Blog CTA",
+            "name": "hide_blog_cta",
+            "type": "true_false",
+            "instructions": "If you would like to hide the call to action for this blog post check this box. You can also check this box to hide it at the bottom of the post and use the shortcode [blogcta] to place it anywhere you want in your content.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Hide blog call to action",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5afc3cbad01f8",
+            "label": "CTA Title",
+            "name": "cta_title",
+            "type": "text",
+            "instructions": "Enter a title to override what is set in Options.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5afc3d05d01f9",
+            "label": "CTA Button",
+            "name": "cta_button",
+            "type": "link",
+            "instructions": "Setup your link to override what is set in Options.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_5afc3d23d01fb",
+            "label": "CTA Text",
+            "name": "cta_text",
+            "type": "textarea",
+            "instructions": "Enter text to override what is set in Options.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "br"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1598037688
+}

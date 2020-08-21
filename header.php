@@ -23,19 +23,18 @@
 
 <?php the_field('body_scripts', 'option'); ?>
 
-<header class="header clearfic">
+<header class="header">
 
-	<a href="<?php bloginfo('url'); ?>" class="logo left"><img src="<?php bloginfo('template_url'); ?>/images/logo.svg" title="<?php the_field('logo_title', 'option'); ?>" alt="<?php the_field('logo_alt_text', 'option'); ?>"></a>
+	<a href="<?php bloginfo('url'); ?>" class="logo"><img src="<?php bloginfo('template_url'); ?>/images/logo.svg" title="<?php the_field('logo_title', 'option'); ?>" alt="<?php the_field('logo_alt_text', 'option'); ?>"></a>
 	
-	<a class="menu-link right" href="#nav">&#9776; Menu</a>
+	<a class="menu-toggle" href="#">&#9776; Menu</a>
 
 	<?php
 
 		$defaults = array(
-			'menu'            => 'Main Menu',
+			'theme_location'  => 'main_menu',
 			'container'       => 'nav',
-			'container_class' => 'nav right',
-			'container_id'    => 'nav',
+			'container_class' => 'nav',
 			'menu_class'      => ''
 		);
 
@@ -44,3 +43,5 @@
 	?>
 
 </header><!-- end header -->
+
+<?php get_template_part('partials/mobile-nav'); ?>

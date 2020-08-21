@@ -3,20 +3,27 @@ jQuery(function($) {
 	// Mobile Menu Dropdown
 	var carrot = '<span class="carrot">+</span>'
 
-	$('.nav .menu-item-has-children').append(carrot);
-	$('.nav .carrot').click(function(event) {
+	$('.mobile-nav .menu-item-has-children').append(carrot);
+	$('.mobile-nav .carrot').click(function(event) {
 		event.preventDefault();
 		$(this).parent().children('ul').toggleClass('active');
 	});
 
-	var $menu = $('#nav'),
-		  $menulink = $('.menu-link'),
-		  $menuTrigger = $('.menu-item-has-children > a');
+	// Mobile Nav Toggle
+	$('.menu-toggle').click(function(event) {
+		event.preventDefault();
+		$('.mobile-nav-container').addClass('active');
+	});
 
-	$menulink.click(function(e) {
-		e.preventDefault();
-		$menulink.toggleClass('active');
-		$menu.toggleClass('active');
+	$('.mobile-nav-container .close').click(function(event) {
+		event.preventDefault();
+		$('.mobile-nav-container').removeClass('active');
+	});
+
+	// Blog Category Selector
+	$('.blog-cat-switcher').change(function(event) {
+		var category = $('.blog-cat-switcher option:selected').val();
+		window.location.href = category;
 	});
 
 });

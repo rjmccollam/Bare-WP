@@ -21,6 +21,7 @@ $text-color: #222; // used for main body text
 $h1: #222; // used for <h1>'s
 $h2: #222; // used for <h2>'s
 $h3: #222; // used for <h3>'s
+$h4: #222; // used for <h4>'s
 $link: #f00; // main link color
 $link-hover: #222; // main link hover color
 
@@ -30,11 +31,12 @@ $link-hover: #222; // main link hover color
 -------------------------------------------------------------- */
 
 // Typography
-$font-size: .9375rem; // used for main body text
-$line-height: 1.625rem; // used for line-height on main body text
+$font-size: 1.25rem; // used for main body text
+$line-height: 2rem; // used for line-height on main body text
 $h1-size: 2.5rem; // used for size of content <h1>
 $h2-size: 2rem; // used for size of content <h2>
 $h3-size: 1.5rem; // used for size of content <h3>
+$h4-size: 1.5rem; // used for size of content <h4>
 
 // Breakpoints
 $large-bp: 1300px;

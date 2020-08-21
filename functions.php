@@ -3,7 +3,7 @@
     // Theme Scripts & Styles
     function theme_scripts() {
         wp_enqueue_style( 'main', get_stylesheet_uri(), array(), filemtime( get_template_directory() . '/style.css') );
-        wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,300,700' );
+        wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,300,700' );
         wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'), filemtime( get_template_directory() . '/js/scripts.min.js'), true );
     }
     add_action( 'wp_enqueue_scripts', 'theme_scripts' );
@@ -33,19 +33,6 @@
     }
     add_action('init', 'removeHeadLinks');
     remove_action('wp_head', 'wp_generator');
-    
-    // Sidebar Widgets
-    if (function_exists('register_sidebar')) {
-    	register_sidebar(array(
-    		'name' => 'Sidebar Widgets',
-    		'id'   => 'sidebar-widgets',
-    		'description'   => 'These are widgets for the sidebar.',
-    		'before_widget' => '<div class="widget">',
-    		'after_widget'  => '</div>',
-    		'before_title'  => '<h3>',
-    		'after_title'   => '</h3>'
-    	));
-    }
 
     // Add Read More link to excerpt
     function new_excerpt_more($more) {
@@ -53,6 +40,14 @@
         return '…';
     }
     add_filter('excerpt_more', 'new_excerpt_more');
+
+    // Blog Call To Action Shortcode
+    function blog_cta() {
+        ob_start();
+        get_template_part('partials/blog-cta');
+        return ob_get_clean(); 
+    }
+    add_shortcode('blogcta', 'blog_cta');
 
     // Add Featured Image support
     add_theme_support( 'post-thumbnails' );

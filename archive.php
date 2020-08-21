@@ -1,10 +1,14 @@
 <?php get_header(); ?>
 
+<?php get_template_part('partials/secondary-page-title'); ?>
+
+<section class="content container clearfix">
+
 	<?php if (have_posts()) : ?>
 
 		<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 
-		<h1>
+		<h2>
 
 			<?php if (is_category()) { ?><?php single_cat_title(); ?>
 
@@ -20,7 +24,7 @@
 
 			<?php } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>Blog Archives<?php } ?>
 
-		</h1>
+		</h2>
 
 	<?php while (have_posts()) : the_post(); ?>
 		
@@ -36,6 +40,6 @@
 
 	<?php endif; ?>
 
-<?php get_sidebar(); ?>
+</section><!-- end content -->
 
 <?php get_footer(); ?>

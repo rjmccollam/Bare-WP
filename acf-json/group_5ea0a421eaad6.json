@@ -1,0 +1,111 @@
+{
+    "key": "group_5ea0a421eaad6",
+    "title": "Page Title",
+    "fields": [
+        {
+            "key": "field_5ea0a42b2c5d5",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "Enter a title. If nothings is entered the name of the page will be used.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ea0a43b2c5d6",
+            "label": "Optional H1",
+            "name": "optional_h1",
+            "type": "text",
+            "instructions": "Enter an optional h1.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ea4585721152",
+            "label": "No Padding",
+            "name": "no_padding",
+            "type": "true_false",
+            "instructions": "Check this box to remove bottom padding on the page title.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "Remove bottom padding",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5ea45ead48cd1",
+            "label": "Breadcrumbs",
+            "name": "breadcrumbs",
+            "type": "post_object",
+            "instructions": "Build your breadcrumbs.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "object",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "featured_image"
+    ],
+    "active": true,
+    "description": "",
+    "modified": 1598037688
+}

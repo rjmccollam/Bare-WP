@@ -1,6 +1,6 @@
 html {overflow-x: hidden;}
 body {background: $bg; font-family: $primary-font; font-size: $font-size; line-height: $line-height; color: $text-color; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden;}
-.container {width: 90%; max-width: 1200px; margin: 0 auto; position: relative;}
+.container {width: 95%; max-width: 1440px; margin: 0 auto; position: relative;}
 
 .right {float: right;}
 .left {float: left;}
@@ -20,11 +20,20 @@ a {color: $link; text-decoration: none; @include transition(all);
 
 iframe {max-width: 100%;}
 
-h1 {font-family: $secondary-font; font-size: $h1-size; line-height: 1.1em; color: $h1; font-weight: 400;}
-h2 {font-family: $primary-font; font-size: $h2-size; line-height: 1.1em; color: $h2; font-weight: 400;}
-h3 {font-family: $tertiary-font; font-size: $h3-size; line-height: 1.1em; color: $h3; font-weight: 400;}
+h1, .h1 {font-family: $secondary-font; font-size: $h1-size; line-height: 1.1em; color: $h1; font-weight: 400;
+	@media (max-width: $med-bp) {font-size: $h1-size * .8;}
+	@media (max-width: $small-bp) {font-size: $h1-size * .6;}
+	&.optional-h1 {}
+}
+h2, .h2 {font-family: $primary-font; font-size: $h2-size; line-height: 1.1em; color: $h2; font-weight: 400;
+	@media (max-width: $med-bp) {font-size: $h2-size * .8;}
+	@media (max-width: $small-bp) {font-size: $h2-size * .7;}
+	&.optional-h1 {}
+}
+h3, .h3 {font-family: $tertiary-font; font-size: $h3-size; line-height: 1.1em; color: $h3; font-weight: 400;}
+h4, .h4 {font-family: $tertiary-font; font-size: $h4-size; line-height: 1.1em; color: $h4; font-weight: 400;}
 
-.img-left {float: left; margin: 5px 15px 5px 0;}
-.img-right {float: right; margin: 5px 0 5px 15px;}
+.alignleft {float: left; margin: 5px 50px 25px 0;}
+.alignright {float: right; margin: 5px 0 25px 50px;}
 
 .button {}
