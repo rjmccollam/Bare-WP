@@ -4,7 +4,7 @@
 	
 	<div class="container clearfix">
 		
-		<div class="sub-content content">
+		<div class="sub-content content <?php spacing_classes(); ?>">
 
 			<?php if ( get_sub_field('title') ) { ?>
 			

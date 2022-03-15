@@ -1,6 +1,6 @@
 <section class="form-callout">
 	
-	<div class="content container">
+	<div class="content container <?php spacing_classes(); ?>">
 		
 		<div class="sub-content clearfix">
 			

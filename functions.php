@@ -64,6 +64,14 @@
         echo $feat_image;
     }
 
+    // Spacing Classes
+    function spacing_classes() {
+        $top_spacing = get_sub_field('top_spacing');
+        $bottom_spacing = get_sub_field('bottom_spacing');
+
+        echo 'spacing-top-' . $top_spacing . ' spacing-bottom-' . $bottom_spacing;
+    }
+
     // Custom Menus
     register_nav_menus( array(
         'main_menu' => 'Main Menu',

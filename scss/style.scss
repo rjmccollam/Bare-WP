@@ -51,7 +51,7 @@
 
 /*    Content
 -------------------------------------------------------------- */
-.content {padding: 80px 0 40px;
+.content {
 	h1, h2, h3, h4, h5, h6 {margin: 0 0 20px;}
 	p, form, iframe, blockquote, hr {margin: 0 0 40px;}
 	ul, ol {margin: 0 0 40px 30px;}
@@ -72,7 +72,7 @@
 	.image {background-size: cover; background-position: center center; width: 50%; height: 100%; position: absolute; top: 0; right: 0;
 		@media (max-width: $med-bp) {position: relative; width: 100%; height: 250px;}
 	}
-	.sub-content {width: 48%; max-width: 650px; padding: 80px 0;
+	.sub-content {width: 48%; max-width: 650px;
 		@media (max-width: $med-bp) {float: none; width: 100%; max-width: 100%;}
 	}
 }
@@ -81,7 +81,7 @@
 
 /*    Builder > Form Callout
 -------------------------------------------------------------- */
-.form-callout {position: relative; padding: 80px 0 160px;
+.form-callout {position: relative;
 	.container {display: flex; flex-wrap: wrap; justify-content: space-between;
 		@media (max-width: $med-bp) {justify-content: center;}
 		.sub-content {width: calc(100% - 565px);

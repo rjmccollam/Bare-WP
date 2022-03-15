@@ -20,6 +20,25 @@ a {color: $link; text-decoration: none; @include transition(all);
 
 iframe {max-width: 100%;}
 
+.spacing-top-large {padding-top: $spacing-large;
+	@media (max-width: $small-bp) {padding-top: $spacing-large-mobile;}
+}
+.spacing-top-medium {padding-top: $spacing-medium;
+	@media (max-width: $small-bp) {padding-top: $spacing-medium-mobile;}
+}
+.spacing-top-small {padding-top: $spacing-small;
+	@media (max-width: $small-bp) {padding-top: $spacing-small-mobile;}
+}
+.spacing-bottom-large {padding-bottom: $spacing-large;
+	@media (max-width: $small-bp) {padding-bottom: $spacing-large-mobile;}
+}
+.spacing-bottom-medium {padding-bottom: $spacing-medium;
+	@media (max-width: $small-bp) {padding-bottom: $spacing-medium-mobile;}
+}
+.spacing-bottom-small {padding-bottom: $spacing-small;
+	@media (max-width: $small-bp) {padding-bottom: $spacing-small-mobile;}
+}
+
 h1, .h1 {font-family: $secondary-font; font-size: $h1-size; line-height: 1.1em; color: $h1; font-weight: 400;
 	@media (max-width: $med-bp) {font-size: $h1-size * .8;}
 	@media (max-width: $small-bp) {font-size: $h1-size * .6;}
